@@ -1,0 +1,97 @@
+= Upgrade Guide - Portal
+Active Intelligence Platform
+:title-logo-image: image:/theme/logo.png[pdfwidth=3.5in,align=right]
+:revnumber: v0.1.1
+:doctype: book
+:encoding: utf-8
+:lang: en
+:numbered:
+:icons: font
+:source-highlighter: rouge
+:sectnumlevels: 5
+:toc: left
+:chapter-label:
+
+
+== Introduction
+
+This document details the portal upgrade process for 0.1.X versions.
+
+=== Naming Conventions
+
+In this document the following naming conventions will be established.
+
+|===
+|Variable | Meaning/mapping
+
+|${YOUR_NAMESPACE} | The kubernetes namespace where to deploy all the elements of the installation
+|${DEP_NAME} | The name of the already installed portal deployment
+|${BASE_DIR} | The directory used to store deployments. Value defined xref:install.adoc#_base_dir[here].
+|${UPGRADE_PATH} | The storage location to the upgrade path. Value defined xref:install.adoc#_upgrade_path[here].
+|${UPGRADE_CHART_VERSION} | The chart version to be used when upgrading the deployment
+|${UPGRADE_IMAGE_REG} | The new image registry to be used when upgrading the deployment
+|${UPGRADE_IMAGE_REPO} | The new image repository to be used when upgrading the deployment
+|${UPGRADE_IMAGE_TAG} | The new image tag to be used when upgrading the deployment
+|${PORTAL_SCHEMA} | The `Adm` Portal schema defined on the `product-config`
+
+|===
+
+== Upgrade Steps
+
+The steps below assume a functional environment, with a portal deployment ready, created by following the xref:install.adoc#_installation_steps[Installation Guide].
+
+This process is composed of two steps:
+
+- *Uninstall deployment*: uninstall the previous deployment without removing any database or storage objects - removes only the kubernetes deployment.
+- *Install deployment with new images*: install same deployment with newer image, updating the instance - using the *not deleted* database objects - on the new deployment.
+
+=== Step 1 - Deployment storage directories
+
+You need to have an updated `product-config` and `license` file.
+
+[WARNING]
+Make sure your product-config is updated with the properties defined as in xref:upgrade.adoc#_portal_config[this section].
+
+Then upload this two files to the *startup*, *cleanup*, and *upgrade* storage directories.
+
+=== Step 2 - Deployment registry
+
+To be in accordance with new versions, in this step you will update the `instance-registry.tgz` package and storage location, by running the following command:
+
+[source,bash]
+----
+./bin/upgrade.sh ${DEP_NAME} ${BASE_DIR}
+----
+
+After this, you should have the `registry.tgz` package inside `${BASE_DIR}/${DEP_NAME}/data`
+
+=== Step 3 - Uninstall previous deployment
+
+Because there are major changes on the newer versions of portal charts, the previous deployment needs to be uninstalled, without deleting the database or storage objects.
+You can do this by running the following command:
+
+[source,bash]
+----
+helm uninstall ${DEP_NAME} --no-hooks
+----
+
+=== Step 4 - Install deployment with new images
+
+To install again the same deployment but with a new image, you need to set the option:
+
+- `deployment.setup-path="${UPGRADE_PATH}"`.
+
+This will ensure that an `update-instance` is run instead of the usual setup process.
+Execute the following command:
+
+[source,bash]
+----
+helm install ${DEP_NAME} \
+  --set deployment.setup-path="${UPGRADE_PATH}" \
+  --set image.registry=${UPGRADE_IMAGE_REG} \
+  --set image.repository=${UPGRADE_IMAGE_REPO} \
+  --set image.tag=${UPGRADE_IMAGE_TAG} \
+  --timeout 30m \
+  <PATH_TO_BUNDLE>/charts/ \
+  --version "${UPGRADE_CHART_VERSION}"
+----
