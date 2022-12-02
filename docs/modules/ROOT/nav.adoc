@@ -1,5 +1,5 @@
-* xref: install.adoc
-* xref: argeuments.adoc
-* xref: patch.adoc
-* xref: upgrade_from_0.1.X.adoc
-* xref: upgrade.adoc
+* xref: install.adoc[]
+* xref: argeuments.adoc[]
+* xref: patch.adoc[]
+* xref: upgrade_from_0.1.X.adoc[]
+* xref: upgrade.adoc[]
