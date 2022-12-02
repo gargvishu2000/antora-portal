@@ -1,0 +1,6 @@
+name: antora-portal
+title: Antora-Portal
+version: ~
+start_page: install.adoc
+nav:
+- modules/ROOT/nav.adoc
