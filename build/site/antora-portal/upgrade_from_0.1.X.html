@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Upgrade Guide - Portal :: Antora-Portal</title>
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="..">Antora-Portal</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-portal" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="install.html">Antora-Portal</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: install.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: argeuments.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: patch.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade_from_0.1.X.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora-Portal</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="install.html">Antora-Portal</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="install.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="install.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="install.html">Antora-Portal</a></li>
+    <li><a href="upgrade_from_0.1.X.html">Upgrade Guide - Portal</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/gargvishu2000/antora-portal/edit/main/docs/modules/ROOT/pages/upgrade_from_0.1.X.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Upgrade Guide - Portal</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_naming_conventions">1.1. Naming Conventions</a></li>
+</ul>
+</li>
+<li><a href="#_upgrade_steps">2. Upgrade Steps</a>
+<ul class="sectlevel2">
+<li><a href="#_step_1_deployment_storage_directories">2.1. Step 1 - Deployment storage directories</a></li>
+<li><a href="#_step_2_deployment_registry">2.2. Step 2 - Deployment registry</a></li>
+<li><a href="#_step_3_uninstall_previous_deployment">2.3. Step 3 - Uninstall previous deployment</a></li>
+<li><a href="#_step_4_install_deployment_with_new_images">2.4. Step 4 - Install deployment with new images</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document details the portal upgrade process for 0.1.X versions.</p>
+</div>
+<div class="sect2">
+<h3 id="_naming_conventions"><a class="anchor" href="#_naming_conventions"></a>1.1. Naming Conventions</h3>
+<div class="paragraph">
+<p>In this document the following naming conventions will be established.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variable</th>
+<th class="tableblock halign-left valign-top">Meaning/mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${YOUR_NAMESPACE}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The kubernetes namespace where to deploy all the elements of the installation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${DEP_NAME}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the already installed portal deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${BASE_DIR}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The directory used to store deployments. Value defined <a href="install.html#_base_dir" class="xref page">here</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_PATH}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The storage location to the upgrade path. Value defined <a href="install.html#_upgrade_path" class="xref page">here</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_CHART_VERSION}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The chart version to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_IMAGE_REG}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new image registry to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_IMAGE_REPO}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new image repository to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_IMAGE_TAG}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new image tag to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${PORTAL_SCHEMA}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>Adm</code> Portal schema defined on the <code>product-config</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_upgrade_steps"><a class="anchor" href="#_upgrade_steps"></a>2. Upgrade Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The steps below assume a functional environment, with a portal deployment ready, created by following the <a href="install.html#_installation_steps" class="xref page">Installation Guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>This process is composed of two steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Uninstall deployment</strong>: uninstall the previous deployment without removing any database or storage objects - removes only the kubernetes deployment.</p>
+</li>
+<li>
+<p><strong>Install deployment with new images</strong>: install same deployment with newer image, updating the instance - using the <strong>not deleted</strong> database objects - on the new deployment.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_step_1_deployment_storage_directories"><a class="anchor" href="#_step_1_deployment_storage_directories"></a>2.1. Step 1 - Deployment storage directories</h3>
+<div class="paragraph">
+<p>You need to have an updated <code>product-config</code> and <code>license</code> file.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Make sure your product-config is updated with the properties defined as in <a href="upgrade.html#_portal_config" class="xref page">this section</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Then upload this two files to the <strong>startup</strong>, <strong>cleanup</strong>, and <strong>upgrade</strong> storage directories.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_deployment_registry"><a class="anchor" href="#_step_2_deployment_registry"></a>2.2. Step 2 - Deployment registry</h3>
+<div class="paragraph">
+<p>To be in accordance with new versions, in this step you will update the <code>instance-registry.tgz</code> package and storage location, by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./bin/upgrade.sh ${DEP_NAME} ${BASE_DIR}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After this, you should have the <code>registry.tgz</code> package inside <code>${BASE_DIR}/${DEP_NAME}/data</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_3_uninstall_previous_deployment"><a class="anchor" href="#_step_3_uninstall_previous_deployment"></a>2.3. Step 3 - Uninstall previous deployment</h3>
+<div class="paragraph">
+<p>Because there are major changes on the newer versions of portal charts, the previous deployment needs to be uninstalled, without deleting the database or storage objects.
+You can do this by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm uninstall ${DEP_NAME} --no-hooks</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_4_install_deployment_with_new_images"><a class="anchor" href="#_step_4_install_deployment_with_new_images"></a>2.4. Step 4 - Install deployment with new images</h3>
+<div class="paragraph">
+<p>To install again the same deployment but with a new image, you need to set the option:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deployment.setup-path="${UPGRADE_PATH}"</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This will ensure that an <code>update-instance</code> is run instead of the usual setup process.
+Execute the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm install ${DEP_NAME} \
+  --set deployment.setup-path="${UPGRADE_PATH}" \
+  --set image.registry=${UPGRADE_IMAGE_REG} \
+  --set image.repository=${UPGRADE_IMAGE_REPO} \
+  --set image.tag=${UPGRADE_IMAGE_TAG} \
+  --timeout 30m \
+  &lt;PATH_TO_BUNDLE&gt;/charts/ \
+  --version "${UPGRADE_CHART_VERSION}"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

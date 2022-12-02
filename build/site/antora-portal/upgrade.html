@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Plain Portal Upgrade process :: Antora-Portal</title>
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="..">Antora-Portal</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-portal" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="install.html">Antora-Portal</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: install.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: argeuments.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: patch.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade_from_0.1.X.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora-Portal</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="install.html">Antora-Portal</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="install.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="install.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="install.html">Antora-Portal</a></li>
+    <li><a href="upgrade.html">Plain Portal Upgrade process</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/gargvishu2000/antora-portal/edit/main/docs/modules/ROOT/pages/upgrade.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Plain Portal Upgrade process</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a></li>
+<li><a href="#_portal_upgrade">2. Portal upgrade</a>
+<ul class="sectlevel2">
+<li><a href="#_portal_config">2.1. Create and upload Portal upgrade configurations</a></li>
+<li><a href="#_create_and_upload_portal_startup_configurations">2.2. Create and upload Portal startup configurations</a></li>
+<li><a href="#_upgrade_portal">2.3. Upgrade Portal</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document details the portal upgrade process.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_portal_upgrade"><a class="anchor" href="#_portal_upgrade"></a>2. Portal upgrade</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next steps will use <a href="install.html#_install_portal_eg" class="xref page">this</a> as base for the upgrade scenario.</p>
+</div>
+<div class="sect2">
+<h3 id="_portal_config"><a class="anchor" href="#_portal_config"></a>2.1. Create and upload Portal upgrade configurations</h3>
+<div class="paragraph">
+<p>Upload portal config into <strong>upgrade</strong> directory.</p>
+</div>
+<div class="paragraph">
+<p>Make sure to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>remove</strong> the properties:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;array name="AreaReRouting"/&gt;
+&lt;string name="InstanceName"/&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>add</strong> the property:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;composite output-type="String" name="WebServerHost"&gt;${env.DEPLOYMENT_NAME}&lt;/composite&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ic:instance-config xmlns:ic="urn:wedo:infra:instance-config-2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+	&lt;global&gt;
+		&lt;string name="DbHost"&gt;postgres&lt;/string&gt;
+		&lt;int name="DbPort"&gt;5432&lt;/int&gt;
+		&lt;string name="DbDatabase"&gt;postgres&lt;/string&gt;
+		&lt;string name="DbRdbms"&gt;Postgresql&lt;/string&gt;
+        &lt;string name="DbUsersDbaUser"&gt;postgres&lt;/string&gt;
+        &lt;string name="DbUsersDbaPwd"&gt;postgres&lt;/string&gt;
+        &lt;string name="DbUsersAppUser"&gt;PORTALAPP&lt;/string&gt;
+        &lt;string name="DbUsersAppPwd"&gt;PORTALAPP&lt;/string&gt;
+        &lt;string name="DbUsersAdmUser"&gt;PORTALADM&lt;/string&gt;
+		&lt;string name="DbUsersAdmPwd"&gt;PORTALADM&lt;/string&gt;
+		&lt;string name="CompanyWebIdentifier"&gt;mobileum.com&lt;/string&gt;
+		&lt;string name="ServerAdminPwd"&gt;Password1&lt;/string&gt;
+		&lt;string name="ServerInternalPwd"&gt;Password1&lt;/string&gt;
+        &lt;string name="DbTablespacesSmallData"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesMediumData"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesLargeData"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesLOB"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesSmallIndex"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesMediumIndex"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesLargeIndex"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;string name="DbTablespacesDefault"&gt;PG_DEFAULT&lt;/string&gt;
+		&lt;string name="DbTablespacesTemp"&gt;PG_DEFAULT&lt;/string&gt;
+        &lt;int name="WebServerPort"&gt;8080&lt;/int&gt; &lt;!-- Can't be changed --&gt;
+		&lt;int name="WebServerShutdownPort"&gt;8081&lt;/int&gt; &lt;!-- Can't be changed --&gt;
+		&lt;string name="ServerMemoryOptions"&gt;-Xms128M -Xmx1024M -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:MaxPermSize=256m&lt;/string&gt;
+        &lt;composite name="WebServerHost"&gt;${env.DEPLOYMENT_NAME}&lt;/composite&gt;
+	&lt;/global&gt;
+&lt;/ic:instance-config&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">aws s3 cp product-config.xml s3://mybucket/example/portal/upgrade/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Get a product license and upload it into upgrade directory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ aws s3 cp license.lic s3://mybucket/example/portal/upgrade/</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_and_upload_portal_startup_configurations"><a class="anchor" href="#_create_and_upload_portal_startup_configurations"></a>2.2. Create and upload Portal startup configurations</h3>
+<div class="paragraph">
+<p>Upload the previous portal config and license to startup and cleanup directories.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">aws s3 cp product-config.xml s3://mybucket/example/portal/startup/
+aws s3 cp license.lic s3://mybucket/example/portal/startup/
+
+aws s3 cp product-config.xml s3://mybucket/example/portal/cleanup/
+aws s3 cp license.lic s3://mybucket/example/portal/cleanup/</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_upgrade_portal"><a class="anchor" href="#_upgrade_portal"></a>2.3. Upgrade Portal</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm upgrade portal \
+  --set deployment.name=portal \
+  --set image.registry="162015117822.dkr.ecr.eu-west-1.amazonaws.com" \
+  --set image.repository="aip/portal-8.2.5_220930" \ <i class="conum" data-value="1"></i><b>(1)</b>
+  --set image.tag="0.4.4" \ <i class="conum" data-value="1"></i><b>(1)</b>
+  --timeout 30m \
+  &lt;PATH_TO_BUNDLE&gt;/charts/ \
+  --version "0.4.4" <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Example of newer image and tag.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Example of newer chart version.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+If you perform an upgrade without changing the image, you need to restart your deployment in order to fetch the new registry from the storage. This can be done by executing <code>kubectl scale deployment portal --replicas=0 &amp;&amp; kubectl scale deployment portal --replicas=1</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

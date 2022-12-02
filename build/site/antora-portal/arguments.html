@@ -1,0 +1,4449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Antora-Portal</title>
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="..">Antora-Portal</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-portal" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="install.html">Antora-Portal</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: install.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: argeuments.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: patch.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade_from_0.1.X.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora-Portal</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="install.html">Antora-Portal</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="install.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="install.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/gargvishu2000/antora-portal/edit/main/docs/modules/ROOT/pages/arguments.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAdminPortletDisplayName">AdminPortletDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAlertsDataTablespace">AlertsDataTablespace</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAlertsIndexTablespace">AlertsIndexTablespace</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAllowNonEcryptedDownloads">AllowNonEcryptedDownloads</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAllowSimultaneousLogins">AllowSimultaneousLogins</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAnalyticsPortletDisplayName">AnalyticsPortletDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAreaPublicName">AreaPublicName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAuditCases">AuditCases</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAuditLogLineFormat">AuditLogLineFormat</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAuditServiceLineFormat">AuditServiceLineFormat</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgAutomaticIdentifier">AutomaticIdentifier</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCasesDataTablespace">CasesDataTablespace</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCasesIndexTablespace">CasesIndexTablespace</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCiphers">Ciphers</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgClassicPortletDisplayName">ClassicPortletDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCompanyWebIdentifier">CompanyWebIdentifier</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConfigurationAreaDisplayName">ConfigurationAreaDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConfigurationContextName">ConfigurationContextName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrAdmMaxConnections">ConnMngrAdmMaxConnections</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrAppMaxConnections">ConnMngrAppMaxConnections</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrDatMaxConnections">ConnMngrDatMaxConnections</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrMaxConnections">ConnMngrMaxConnections</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrMaxInactivity">ConnMngrMaxInactivity</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrMaxTTL">ConnMngrMaxTTL</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>LONG</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrPortalMaxConnections">ConnMngrPortalMaxConnections</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgConnMngrVerbose">ConnMngrVerbose</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCreateSystemPropertiesFromConfigFile">CreateSystemPropertiesFromConfigFile</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCustomPortalProperties">CustomPortalProperties</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgCustomPortlets">CustomPortlets</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ARRAY</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbCreateDATUser">DbCreateDATUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbCreatePortalDbLink">DbCreatePortalDbLink</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbCreateUsers">DbCreateUsers</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbDatabase">DbDatabase</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbDriver">DbDriver</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbHost">DbHost</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbInstallDatTables">DbInstallDatTables</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbJdbcUrl">DbJdbcUrl</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbObjects">DbObjects</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbPort">DbPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbRdbms">DbRdbms</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbServiceName">DbServiceName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesDefault">DbTablespacesDefault</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesLOB">DbTablespacesLOB</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesLargeData">DbTablespacesLargeData</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesLargeIndex">DbTablespacesLargeIndex</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesMediumData">DbTablespacesMediumData</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesMediumIndex">DbTablespacesMediumIndex</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesQuota">DbTablespacesQuota</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ARRAY</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesSmallData">DbTablespacesSmallData</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesSmallIndex">DbTablespacesSmallIndex</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTablespacesTemp">DbTablespacesTemp</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbTnsConfig">DbTnsConfig</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersAdmDomain">DbUsersAdmDomain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersAdmPwd">DbUsersAdmPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersAdmUser">DbUsersAdmUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersAppDomain">DbUsersAppDomain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersAppPwd">DbUsersAppPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersAppUser">DbUsersAppUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersDatDomain">DbUsersDatDomain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersDatPwd">DbUsersDatPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersDatUser">DbUsersDatUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersDbaDomain">DbUsersDbaDomain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersDbaPwd">DbUsersDbaPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDbUsersDbaUser">DbUsersDbaUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDefaultQueryResultSetSize">DefaultQueryResultSetSize</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgDefaultQueryTimeout">DefaultQueryTimeout</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgERTablePrefix">ERTablePrefix</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEmailBasedLogin">EmailBasedLogin</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEnableDBJavaUtils">EnableDBJavaUtils</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEnableParallelizationForStateSave">EnableParallelizationForStateSave</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEnablePartitioning">EnablePartitioning</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEnableRMAdmin">EnableRMAdmin</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEnableRMFeatures">EnableRMFeatures</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgEnableUserManagement">EnableUserManagement</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgExecuteOnExternalProcess">ExecuteOnExternalProcess</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgExternalProcessServerPort">ExternalProcessServerPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgFileRepositoryBaseDir">FileRepositoryBaseDir</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgFMSAlertsFileLocalTmpLocation">FMSAlertsFileLocalTmpLocation</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgFMSBadRecordsFileLocalTmpLocation">FMSBadRecordsFileLocalTmpLocation</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgFMSDataLocation">FMSDataLocation</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgFMSSnapshotLocalTmpLocation">FMSSnapshotLocalTmpLocation</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgGoogleMapKey">GoogleMapKey</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgGrantTablespaceAccess">GrantTablespaceAccess</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgHourglass_KeepDays">Hourglass_KeepDays</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgHourglass_MaxElements">Hourglass_MaxElements</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgHsqlMode">HsqlMode</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgInstanceSecurityAllUsers">InstanceSecurityAllUsers</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgInternalServerCommunicationPwd">InternalServerCommunicationPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgInternalServerCommunicationUser">InternalServerCommunicationUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgJWTClaimUsername">JWTClaimUsername</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgJWTDaysToExpire">JWTDaysToExpire</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgJWTDaysToExpireWarning">JWTDaysToExpireWarning</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgJWTSecretKeyAlias">JWTSecretKeyAlias</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgJWTSecretKeyPwd">JWTSecretKeyPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKeyStoreAlias">KeyStoreAlias</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKeyStorePath">KeyStorePath</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKeyStorePwd">KeyStorePwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKeyStoreType">KeyStoreType</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKpiActiveFrom">KpiActiveFrom</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKpiActiveTo">KpiActiveTo</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgKpiRevenueLossFormula">KpiRevenueLossFormula</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgLegacyPortletDisplayName">LegacyPortletDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgLoggerFormat">LoggerFormat</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgLoginMessagePath">LoginMessagePath</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailServer">MailServer</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailServerPassword">MailServerPassword</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailServerPort">MailServerPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailServerStartTLS">MailServerStartTLS</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailServerUseSSL">MailServerUseSSL</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailServerUser">MailServerUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMailUseAuthentication">MailUseAuthentication</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMasterInstanceId">MasterInstanceId</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMaxSessions">MaxSessions</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgMaxSharedConnectionsPerUser">MaxSharedConnectionsPerUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOnlineHelp">OnlineHelp</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbACMBaselineData">OotbACMBaselineData</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbCBPMDataModel">OotbCBPMDataModel</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbCBPMOperationalDashboards">OotbCBPMOperationalDashboards</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbDataPumpDataModel">OotbDataPumpDataModel</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbDataPumpOperationalDashboards">OotbDataPumpOperationalDashboards</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbFlowDefDataModel">OotbFlowDefDataModel</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbFlowDefOperationalDashboards">OotbFlowDefOperationalDashboards</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbUVEDataModel">OotbUVEDataModel</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOotbUVEOperationalDashboards">OotbUVEOperationalDashboards</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgOperationalPortletDisplayName">OperationalPortletDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPathToPortalInstance">PathToPortalInstance</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPerformServerRegistration">PerformServerRegistration</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalAbouts">PortalAbouts</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbDatabase">PortalDbDatabase</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbDriver">PortalDbDriver</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbHost">PortalDbHost</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbJdbcUrl">PortalDbJdbcUrl</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbPort">PortalDbPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbServiceName">PortalDbServiceName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbUsersAdmDomain">PortalDbUsersAdmDomain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbUsersAdmPwd">PortalDbUsersAdmPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbUsersAdmUser">PortalDbUsersAdmUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbUsersAppDomain">PortalDbUsersAppDomain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbUsersAppPwd">PortalDbUsersAppPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalDbUsersAppUser">PortalDbUsersAppUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortalLogo">PortalLogo</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgArgPortalRefererPolicy">PortalRefererPolicy</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortletCategory">PortletCategory</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortletsCategory">PortletsCategory</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPortletsDeployerRole">PortletsDeployerRole</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgPreventUserImportLDAP">PreventUserImportLDAP</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRMAdminContextName">RMAdminContextName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgReportPDFSigningKeyAlias">ReportPDFSigningKeyAlias</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgReportPDFSigningKeyPwd">ReportPDFSigningKeyPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgReportPDFSigningTSAServerPwd">ReportPDFSigningTSAServerPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgReportPDFSigningTSAServerURL">ReportPDFSigningTSAServerURL</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgReportPDFSigningTSAServerUser">ReportPDFSigningTSAServerUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRepositoryLocation">RepositoryLocation</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgResetServerAdminPwd">ResetServerAdminPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgResetServerInternalPwd">ResetServerInternalPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRootPerspectiveId">RootPerspectiveId</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>LONG</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRuleDebuggerMaxTests">RuleDebuggerMaxTests</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRuleOptimizerCompressIndicators">RuleOptimizerCompressIndicators</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRuleOptimizerMaxTests">RuleOptimizerMaxTests</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgRuleOutputEventLoader_Mode">RuleOutputEventLoader_Mode</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSFTablePrefix">SFTablePrefix</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSatellite">Satellite</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSearchMaxRowsPowerUser">SearchMaxRowsPowerUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSearchMaxRowsUser">SearchMaxRowsUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSearchMaxThreads">SearchMaxThreads</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerAdminPwd">ServerAdminPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerAdminUser">ServerAdminUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerHost">ServerHost</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerInternalPwd">ServerInternalPwd</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerInternalUser">ServerInternalUser</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerMaxSessions">ServerMaxSessions</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerMemoryOptions">ServerMemoryOptions</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerPort">ServerPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerSessionTimeout">ServerSessionTimeout</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>LONG</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgServerUseSSL">ServerUseSSL</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSessionTimeout">SessionTimeout</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>LONG</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgShowCustomCompanyLogo">ShowCustomCompanyLogo</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgShowCustomCompanyLogoAsMain">ShowCustomCompanyLogoAsMain</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSmartContentDisplayName">SmartContentDisplayName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSslProtocol">SslProtocol</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgStateSaveMaxThreads">StateSaveMaxThreads</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgStatisticsDataTablespace">StatisticsDataTablespace</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgStatisticsIndexTablespace">StatisticsIndexTablespace</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgSubscriptionFraud_TraceMatchToFile">SubscriptionFraud_TraceMatchToFile</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgTermsOfUseRequired">TermsOfUseRequired</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgTermsOfUseRequiredAlways">TermsOfUseRequiredAlways</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgUVEKeyRecordThreshold">UVEKeyRecordThreshold</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgUpdateReports">UpdateReports</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgUsePartitionedResults">UsePartitionedResults</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgUserManagementMaxConnections">UserManagementMaxConnections</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgUsersInactivityPeriod">UsersInactivityPeriod</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWarningMessagePath">WarningMessagePath</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebCompressableMimeTypes">WebCompressableMimeTypes</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebServerHost">WebServerHost</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebServerPort">WebServerPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebServerShutdownPort">WebServerShutdownPort</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebServerUseH2andALPN">WebServerUseH2andALPN</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebServerUseSSL">WebServerUseSSL</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>BOOLEAN</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebServicesContextName">WebServicesContextName</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>STRING</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgWebSessionTimeout">WebSessionTimeout</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="#ArgxDR_SearchLimit">xDR_SearchLimit</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>INTEGER</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect1">
+<h2 id="Audit"><a class="anchor" href="#Audit"></a>Audit</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgAuditLogLineFormat"><a class="anchor" href="#ArgAuditLogLineFormat"></a>AuditLogLineFormat</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the order and field separator to display in the audit file.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16}<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgAuditServiceLineFormat"><a class="anchor" href="#ArgAuditServiceLineFormat"></a>AuditServiceLineFormat</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Portal Audit Service line format.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>{0},{1},{2},{3},{4},{5},{6}<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Database"><a class="anchor" href="#Database"></a>Database</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgConnMngrAdmMaxConnections"><a class="anchor" href="#ArgConnMngrAdmMaxConnections"></a>ConnMngrAdmMaxConnections</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of simultaneous open connections to RAID ADM database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>50<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConnMngrDatMaxConnections"><a class="anchor" href="#ArgConnMngrDatMaxConnections"></a>ConnMngrDatMaxConnections</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of simultaneous open connections to the RAID DAT database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>50<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConnMngrMaxConnections"><a class="anchor" href="#ArgConnMngrMaxConnections"></a>ConnMngrMaxConnections</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of simultaneous open connections to the RAID database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>100<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConnMngrMaxInactivity"><a class="anchor" href="#ArgConnMngrMaxInactivity"></a>ConnMngrMaxInactivity</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum time, in milliseconds, that a connection can be inactive. Once expired, the Connection Manager closes the connection at the first opportunity.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>300000<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConnMngrMaxTTL"><a class="anchor" href="#ArgConnMngrMaxTTL"></a>ConnMngrMaxTTL</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum time, in milliseconds, that a connection can remain alive. Once expired the Connection Manager closes the connection at the first opportunity.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>LONG<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>900000<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConnMngrPortalMaxConnections"><a class="anchor" href="#ArgConnMngrPortalMaxConnections"></a>ConnMngrPortalMaxConnections</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of simultaneously open connections to the RAID PORTAL database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>30<br>
+<strong>Applies To: </strong>rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConnMngrVerbose"><a class="anchor" href="#ArgConnMngrVerbose"></a>ConnMngrVerbose</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if the queries being executed in the database should be written into the log (pending the logLevel=DEBUG).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbCreateDATUser"><a class="anchor" href="#ArgDbCreateDATUser"></a>DbCreateDATUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the DAT user is created.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbCreateUsers"><a class="anchor" href="#ArgDbCreateUsers"></a>DbCreateUsers</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the installation process creates database users and roles. Sometimes DBAs don't allow the creation of a DBS user and this is an alternative installation.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbDatabase"><a class="anchor" href="#ArgDbDatabase"></a>DbDatabase</h3>
+<div class="listingblock">
+<div class="content">
+<pre>DbRdbms = Oracle: Database System Identifier, often referred to as SID. DbRdbms = Postgresql: Database name.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbDriver"><a class="anchor" href="#ArgDbDriver"></a>DbDriver</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database JDBC Driver Class Name.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbHost"><a class="anchor" href="#ArgDbHost"></a>DbHost</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Oracle database server name or IP address.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbInstallDatTables"><a class="anchor" href="#ArgDbInstallDatTables"></a>DbInstallDatTables</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if DAT tables are installed, such as RAID_T_ALARM.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbJdbcUrl"><a class="anchor" href="#ArgDbJdbcUrl"></a>DbJdbcUrl</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database JDBC URL. When defined, this parameter redefines the default URL. You can configure this parameter to support advanced JDBC URLs, such as ORACLE RAC, or a PDB (pluggable database).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbObjects"><a class="anchor" href="#ArgDbObjects"></a>DbObjects</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if Portal database objects should be created or not.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbPort"><a class="anchor" href="#ArgDbPort"></a>DbPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Oracle database server TCP/IP port. Postgresql Database server TCP/IP port.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbRdbms"><a class="anchor" href="#ArgDbRdbms"></a>DbRdbms</h3>
+<div class="listingblock">
+<div class="content">
+<pre>RDBMS type (Postgresql, Oracle). This setting is case sensitive</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>Oracle<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesDefault"><a class="anchor" href="#ArgDbTablespacesDefault"></a>DbTablespacesDefault</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Default user's tablespace.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesLOB"><a class="anchor" href="#ArgDbTablespacesLOB"></a>DbTablespacesLOB</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for LOB objects.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesLargeData"><a class="anchor" href="#ArgDbTablespacesLargeData"></a>DbTablespacesLargeData</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for large tables.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesLargeIndex"><a class="anchor" href="#ArgDbTablespacesLargeIndex"></a>DbTablespacesLargeIndex</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for large indexes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesMediumData"><a class="anchor" href="#ArgDbTablespacesMediumData"></a>DbTablespacesMediumData</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for medium tables.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesMediumIndex"><a class="anchor" href="#ArgDbTablespacesMediumIndex"></a>DbTablespacesMediumIndex</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for medium indexes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesQuota"><a class="anchor" href="#ArgDbTablespacesQuota"></a>DbTablespacesQuota</h3>
+<div class="listingblock">
+<div class="content">
+<pre>A list of additional tablespaces for which you'd like to grant unlimited quota.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>ARRAY<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesSmallData"><a class="anchor" href="#ArgDbTablespacesSmallData"></a>DbTablespacesSmallData</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for small tables.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesSmallIndex"><a class="anchor" href="#ArgDbTablespacesSmallIndex"></a>DbTablespacesSmallIndex</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for small indices.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbTablespacesTemp"><a class="anchor" href="#ArgDbTablespacesTemp"></a>DbTablespacesTemp</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Temporary tablespace.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>TEMP<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersAdmDomain"><a class="anchor" href="#ArgDbUsersAdmDomain"></a>DbUsersAdmDomain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The database domain for this user to be used in Postgresql.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersAdmPwd"><a class="anchor" href="#ArgDbUsersAdmPwd"></a>DbUsersAdmPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database administration user password.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersAdmUser"><a class="anchor" href="#ArgDbUsersAdmUser"></a>DbUsersAdmUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database application user name that accesses all objects (no schema manipulation access).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersAppDomain"><a class="anchor" href="#ArgDbUsersAppDomain"></a>DbUsersAppDomain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The database domain for this user to be used in Postgresql.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersAppPwd"><a class="anchor" href="#ArgDbUsersAppPwd"></a>DbUsersAppPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database application user password.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersAppUser"><a class="anchor" href="#ArgDbUsersAppUser"></a>DbUsersAppUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database application user name that accesses all objects (no schema manipulation access).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersDatDomain"><a class="anchor" href="#ArgDbUsersDatDomain"></a>DbUsersDatDomain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The database domain for this user to be used in Postgresql.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersDatPwd"><a class="anchor" href="#ArgDbUsersDatPwd"></a>DbUsersDatPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database DAT user password.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersDatUser"><a class="anchor" href="#ArgDbUsersDatUser"></a>DbUsersDatUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database user that owns all non RAID Core objects. If the user is the same as the ADM user (default), all objects are created with the ADM user.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersDbaDomain"><a class="anchor" href="#ArgDbUsersDbaDomain"></a>DbUsersDbaDomain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The database domain for this user to be used in Postgresql.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersDbaPwd"><a class="anchor" href="#ArgDbUsersDbaPwd"></a>DbUsersDbaPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database administration user password.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDbUsersDbaUser"><a class="anchor" href="#ArgDbUsersDbaUser"></a>DbUsersDbaUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>DBA user name. Used for creating application database users.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEnablePartitioning"><a class="anchor" href="#ArgEnablePartitioning"></a>EnablePartitioning</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When enabled, the partitioning policy is applied to your system's database tables. When disabled, the portioning policy is not applied to your system's database tables. This option is only applicable for new instances.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgGrantTablespaceAccess"><a class="anchor" href="#ArgGrantTablespaceAccess"></a>GrantTablespaceAccess</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When enabled (default), an install/update executes grants for users to tablespaces. When installing on CloudSQL - GCP, this parameter must be set to false.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbDatabase"><a class="anchor" href="#ArgPortalDbDatabase"></a>PortalDbDatabase</h3>
+<div class="listingblock">
+<div class="content">
+<pre>DbRdbms = Oracle: Database System Identifier, often referred to as SID. DbRdbms = Postgresql: Database name.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbDriver"><a class="anchor" href="#ArgPortalDbDriver"></a>PortalDbDriver</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Portal Database Driver Class.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbHost"><a class="anchor" href="#ArgPortalDbHost"></a>PortalDbHost</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database hostname. Mandatory if JDBCUrl is not used.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbJdbcUrl"><a class="anchor" href="#ArgPortalDbJdbcUrl"></a>PortalDbJdbcUrl</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database JDBC URL. When defined, this parameter redefines the default URL. You can configure this parameter to support advanced JDBC URLs, such as ORACLE RAC, or a PDB (pluggable database).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbPort"><a class="anchor" href="#ArgPortalDbPort"></a>PortalDbPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database port. Mandatory if JDBCUrl is not used.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbUsersAdmDomain"><a class="anchor" href="#ArgPortalDbUsersAdmDomain"></a>PortalDbUsersAdmDomain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The Postgresql database domain for this user.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbUsersAdmPwd"><a class="anchor" href="#ArgPortalDbUsersAdmPwd"></a>PortalDbUsersAdmPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database ADM password to backend database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbUsersAdmUser"><a class="anchor" href="#ArgPortalDbUsersAdmUser"></a>PortalDbUsersAdmUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database ADM user to backend database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbUsersAppDomain"><a class="anchor" href="#ArgPortalDbUsersAppDomain"></a>PortalDbUsersAppDomain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The Postgresql database domain for this user.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbUsersAppPwd"><a class="anchor" href="#ArgPortalDbUsersAppPwd"></a>PortalDbUsersAppPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database password to backend database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalDbUsersAppUser"><a class="anchor" href="#ArgPortalDbUsersAppUser"></a>PortalDbUsersAppUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Database application user to backend database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Datamodel"><a class="anchor" href="#Datamodel"></a>Datamodel</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgAllowNonEcryptedDownloads"><a class="anchor" href="#ArgAllowNonEcryptedDownloads"></a>AllowNonEcryptedDownloads</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Enables internal downloading of files via FileID.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDefaultQueryResultSetSize"><a class="anchor" href="#ArgDefaultQueryResultSetSize"></a>DefaultQueryResultSetSize</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of records that a Data Model query is allowed to fetch to frontend reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>150000<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDefaultQueryTimeout"><a class="anchor" href="#ArgDefaultQueryTimeout"></a>DefaultQueryTimeout</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Number of minutes after which, if no activity is detected, a Data Model query is closed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>15<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMaxSharedConnectionsPerUser"><a class="anchor" href="#ArgMaxSharedConnectionsPerUser"></a>MaxSharedConnectionsPerUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Number of available connections for each user, for the Data Model backend and frontend queries.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>5 (Oracle) 20 (Postgres)<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Datastore"><a class="anchor" href="#Datastore"></a>Datastore</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgSearchMaxRowsPowerUser"><a class="anchor" href="#ArgSearchMaxRowsPowerUser"></a>SearchMaxRowsPowerUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of rows a power user can query.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>-1<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSearchMaxRowsUser"><a class="anchor" href="#ArgSearchMaxRowsUser"></a>SearchMaxRowsUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of rows a user can query.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>1000000<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSearchMaxThreads"><a class="anchor" href="#ArgSearchMaxThreads"></a>SearchMaxThreads</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of threads available to Datastore queries.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>100<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgDatastoreSystemDefaultFormat"><a class="anchor" href="#ArgDatastoreSystemDefaultFormat"></a>DatastoreSystemDefaultFormat</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Default file format to be used on Datastore files.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>avro<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Fraud"><a class="anchor" href="#Fraud"></a>Fraud</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgAlertsDataTablespace"><a class="anchor" href="#ArgAlertsDataTablespace"></a>AlertsDataTablespace</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the tablespace for Fraud alerts tables.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgAlertsIndexTablespace"><a class="anchor" href="#ArgAlertsIndexTablespace"></a>AlertsIndexTablespace</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the tablespace for Fraud alerts indexes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgCasesDataTablespace"><a class="anchor" href="#ArgCasesDataTablespace"></a>CasesDataTablespace</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the tablespace for the Fraud case tables.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgCasesIndexTablespace"><a class="anchor" href="#ArgCasesIndexTablespace"></a>CasesIndexTablespace</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the tablespace for Fraud case indexes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgERTablePrefix"><a class="anchor" href="#ArgERTablePrefix"></a>ERTablePrefix</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Prefix to be used on Entity Registry tables. This parameter may be overridden on the application for each entity.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>ER_<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEnableParallelizationForStateSave"><a class="anchor" href="#ArgEnableParallelizationForStateSave"></a>EnableParallelizationForStateSave</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if parallel jobs are created for the operation that saves engines' state.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgFMSAlertsFileLocalTmpLocation"><a class="anchor" href="#ArgFMSAlertsFileLocalTmpLocation"></a>FMSAlertsFileLocalTmpLocation</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the temporary directory for the FMS Alerts File that is created when an engine generates alerts, temporarily, before transferring alerts to a remote filesystem.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>String<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>./tmp/alerts/<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgFMSBadRecordsFileLocalTmpLocation"><a class="anchor" href="#ArgFMSBadRecordsFileLocalTmpLocation"></a>FMSBadRecordsFileLocalTmpLocation</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the temporary directory for the FMS Bad Records File that is created when an engine generates a bad records file, temporarily, before transferring bad records to a remote filesystem.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>String<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>./tmp/fraud/badRecords/<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgFMSDataLocation"><a class="anchor" href="#ArgFMSDataLocation"></a>FMSDataLocation</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the base directory for the FMS Data File System object that is created when an instance is created or updated.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>String<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>/<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgFMSSnapshotLocalTmpLocation"><a class="anchor" href="#ArgFMSSnapshotLocalTmpLocation"></a>FMSSnapshotLocalTmpLocation</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the base directory for the FMS Snapshot Files that are created when an engine creates a snapshot, temporarily, before transferring snapshots to a remote filesystem.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>String<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>./tmp/fraud/<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgHourglass_KeepDays"><a class="anchor" href="#ArgHourglass_KeepDays"></a>Hourglass_KeepDays</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Number of days to keep on the Hourglass service table.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>10<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgHourglass_MaxElements"><a class="anchor" href="#ArgHourglass_MaxElements"></a>Hourglass_MaxElements</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of elements in the run pool.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>1000<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgRuleDebuggerMaxTests"><a class="anchor" href="#ArgRuleDebuggerMaxTests"></a>RuleDebuggerMaxTests</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the maximum number of fraud rule debugger tests that may be running simultaneously</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>5<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgRuleOptimizerCompressIndicators"><a class="anchor" href="#ArgRuleOptimizerCompressIndicators"></a>RuleOptimizerCompressIndicators</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Compresses rule optimizer auxiliary files to save space.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgRuleOptimizerMaxTests"><a class="anchor" href="#ArgRuleOptimizerMaxTests"></a>RuleOptimizerMaxTests</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of simultaneous Rule Optimizer tests.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>5<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgRuleOutputEventLoader_Mode"><a class="anchor" href="#ArgRuleOutputEventLoader_Mode"></a>RuleOutputEventLoader_Mode</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Event loader for alerts.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>NONE<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSFTablePrefix"><a class="anchor" href="#ArgSFTablePrefix"></a>SFTablePrefix</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Prefix used by the Subscription Fraud Models' tables. This setting cannot be overridden on the application.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>SF_<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgStateSaveMaxThreads"><a class="anchor" href="#ArgStateSaveMaxThreads"></a>StateSaveMaxThreads</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the number of parallel jobs that are created for the engines' state saving operation. Please note that this also implies having a database connection per job.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>5<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgStatisticsDataTablespace"><a class="anchor" href="#ArgStatisticsDataTablespace"></a>StatisticsDataTablespace</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for statistics tables.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgStatisticsIndexTablespace"><a class="anchor" href="#ArgStatisticsIndexTablespace"></a>StatisticsIndexTablespace</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tablespace for statistics indexes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSubscriptionFraud_TraceMatchToFile"><a class="anchor" href="#ArgSubscriptionFraud_TraceMatchToFile"></a>SubscriptionFraud_TraceMatchToFile</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Traces matching details to files during the Subscription Fraud process.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Integration"><a class="anchor" href="#Integration"></a>Integration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgGoogleMapKey"><a class="anchor" href="#ArgGoogleMapKey"></a>GoogleMapKey</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Key provided by google sales representative to allow the use of google maps widget.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Legacy"><a class="anchor" href="#Legacy"></a>Legacy</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgDbTnsConfig"><a class="anchor" href="#ArgDbTnsConfig"></a>DbTnsConfig</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the name of the TNS service to be used by SQLLDR and PRO*C.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEnableDBJavaUtils"><a class="anchor" href="#ArgEnableDBJavaUtils"></a>EnableDBJavaUtils</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Legacy tool that deploys a zip package to compress/uncompress a map input from the database.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEnableRMAdmin"><a class="anchor" href="#ArgEnableRMAdmin"></a>EnableRMAdmin</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if the installation process should create a Web context for Report Module administration web application. The default value is false.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, fraud:FraudCenter, fraud:SatelliteServer, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEnableRMFeatures"><a class="anchor" href="#ArgEnableRMFeatures"></a>EnableRMFeatures</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if the installation process should enable the Report Module (RM) component in the installation. The default value is false.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKpiActiveFrom"><a class="anchor" href="#ArgKpiActiveFrom"></a>KpiActiveFrom</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the start day of the KPI Revenue Loss formula in the legacy fraud reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>01/01/1900<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKpiActiveTo"><a class="anchor" href="#ArgKpiActiveTo"></a>KpiActiveTo</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the last day of the KPI Revenue Loss formula in the legacy fraud reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>31/12/2900<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKpiRevenueLossFormula"><a class="anchor" href="#ArgKpiRevenueLossFormula"></a>KpiRevenueLossFormula</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates the KPI Revenue Loss Formula that should be used in the legacy fraud reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>0<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgLegacyPortletDisplayName"><a class="anchor" href="#ArgLegacyPortletDisplayName"></a>LegacyPortletDisplayName</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Name displayed for the portal's legacy portlet.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMasterInstanceId"><a class="anchor" href="#ArgMasterInstanceId"></a>MasterInstanceId</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The name of the master instance in case this is a satellite instance.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS-Satellite, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgRMAdminContextName"><a class="anchor" href="#ArgRMAdminContextName"></a>RMAdminContextName</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tomcat web context name hosting the RAID Report Module Administrator web client.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, fraud:FraudCenter, fraud:SatelliteServer, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgRootPerspectiveId"><a class="anchor" href="#ArgRootPerspectiveId"></a>RootPerspectiveId</h3>
+<div class="listingblock">
+<div class="content">
+<pre>TBD</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>LONG<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>-1<br>
+<strong>Applies To: </strong>raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgUpdateReports"><a class="anchor" href="#ArgUpdateReports"></a>UpdateReports</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates that fraud reports are upgraded when executing an update.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgUsePartitionedResults"><a class="anchor" href="#ArgUsePartitionedResults"></a>UsePartitionedResults</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Enables the partition of the SCH_T_RESULT table, which is the storage for all xDR search results.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgxDR_SearchLimit"><a class="anchor" href="#ArgxDR_SearchLimit"></a>xDR_SearchLimit</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of records a user is able to select by default per datasource type. This is used in the adhoc reconciler component.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>2000000<br>
+<strong>Applies To: </strong>fraud:FraudCenter, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Mail"><a class="anchor" href="#Mail"></a>Mail</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgMailServer"><a class="anchor" href="#ArgMailServer"></a>MailServer</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Mail server hostname or IP address. This address must be accessible by the Portal server.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMailServerPassword"><a class="anchor" href="#ArgMailServerPassword"></a>MailServerPassword</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Authentication user's password for the mail server.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMailServerPort"><a class="anchor" href="#ArgMailServerPort"></a>MailServerPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the Port that the mail server is listening to.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>25<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMailServerStartTLS"><a class="anchor" href="#ArgMailServerStartTLS"></a>MailServerStartTLS</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Parameter indicating if the communication with the server is made using TLS.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMailServerUseSSL"><a class="anchor" href="#ArgMailServerUseSSL"></a>MailServerUseSSL</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Parameter indicating if the communication with the server is made using SSL.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMailServerUser"><a class="anchor" href="#ArgMailServerUser"></a>MailServerUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Authentication user for the mail server.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgMailUseAuthentication"><a class="anchor" href="#ArgMailUseAuthentication"></a>MailUseAuthentication</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Parameter that sets the GUI's default setting for the Use Authentication toggle switch, when configuring an Outgoing Mail (SMTP) connection type.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Miscelaneous"><a class="anchor" href="#Miscelaneous"></a>Miscelaneous</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgConnMngrAppMaxConnections"><a class="anchor" href="#ArgConnMngrAppMaxConnections"></a>ConnMngrAppMaxConnections</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of application connections</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>70<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgUserManagementMaxConnections"><a class="anchor" href="#ArgUserManagementMaxConnections"></a>UserManagementMaxConnections</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of user management connections</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>10<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="OOTB"><a class="anchor" href="#OOTB"></a>OOTB</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgOotbACMBaselineData"><a class="anchor" href="#ArgOotbACMBaselineData"></a>OotbACMBaselineData</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the ACM OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbCBPMDataModel"><a class="anchor" href="#ArgOotbCBPMDataModel"></a>OotbCBPMDataModel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the CBPM Data Model OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbCBPMOperationalDashboards"><a class="anchor" href="#ArgOotbCBPMOperationalDashboards"></a>OotbCBPMOperationalDashboards</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the CBPM Operational Dashboards OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbDataPumpDataModel"><a class="anchor" href="#ArgOotbDataPumpDataModel"></a>OotbDataPumpDataModel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the Data Pump Data Model OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbDataPumpOperationalDashboards"><a class="anchor" href="#ArgOotbDataPumpOperationalDashboards"></a>OotbDataPumpOperationalDashboards</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the Data Pump Operational Dashboards OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbFlowDefDataModel"><a class="anchor" href="#ArgOotbFlowDefDataModel"></a>OotbFlowDefDataModel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if Flow Def Data Model OOTB configurations are installed</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbFlowDefOperationalDashboards"><a class="anchor" href="#ArgOotbFlowDefOperationalDashboards"></a>OotbFlowDefOperationalDashboards</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if Flow Def Operational Dashboards OOTB configurations are installed</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:FraudCenter, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbUVEDataModel"><a class="anchor" href="#ArgOotbUVEDataModel"></a>OotbUVEDataModel</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the UVE Data Model OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOotbUVEOperationalDashboards"><a class="anchor" href="#ArgOotbUVEOperationalDashboards"></a>OotbUVEOperationalDashboards</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if the UVE Operational Dashboards OOTB configurations are installed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Portal"><a class="anchor" href="#Portal"></a>Portal</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgAreaPublicName"><a class="anchor" href="#ArgAreaPublicName"></a>AreaPublicName</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the public name for this server in the overall server federation.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgCompanyWebIdentifier"><a class="anchor" href="#ArgCompanyWebIdentifier"></a>CompanyWebIdentifier</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the name that identifies your organization on the portal. Should be consistent for all server instances.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>mobileum.com<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgConfigurationAreaDisplayName"><a class="anchor" href="#ArgConfigurationAreaDisplayName"></a>ConfigurationAreaDisplayName</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the name that is displayed for the portal's configuration area portlet.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>Configuration Area<br>
+<strong>Applies To: </strong>cm:IS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgCustomPortalProperties"><a class="anchor" href="#ArgCustomPortalProperties"></a>CustomPortalProperties</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Additional settings that can be configured to override the portal's properties.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgCustomPortlets"><a class="anchor" href="#ArgCustomPortlets"></a>CustomPortlets</h3>
+<div class="listingblock">
+<div class="content">
+<pre>An array of custom portlet configurations to create extra applications - visible in the Add Application popup. Please refer to the Application Portlets Customization for details on the available parameters.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>ARRAY<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgLoginMessagePath"><a class="anchor" href="#ArgLoginMessagePath"></a>LoginMessagePath</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the path to the file containting the message with the terms of use to be displayed on login</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalAbouts"><a class="anchor" href="#ArgPortalAbouts"></a>PortalAbouts</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Comma separated list of abouts to be displayed in the portal's About page. If left undefined, PortalLogo is used as default. Possible options include: raid,raid-telecom,ib,cb,rb,shape,fms.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalLogo"><a class="anchor" href="#ArgPortalLogo"></a>PortalLogo</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the theme and product image to be applied. Available options include, raid,raid-healthcare,raid-insurance,raid-publicsector,raid-retail,raid-telecom,raid-utilities,raid-platform,ib,cb,activis,rb,shape</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>raid<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortletCategory"><a class="anchor" href="#ArgPortletCategory"></a>PortletCategory</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the name of the folder that include all the application portlets.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgShowCustomCompanyLogo"><a class="anchor" href="#ArgShowCustomCompanyLogo"></a>ShowCustomCompanyLogo</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When enabled, displays your organization's custom logo.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgShowCustomCompanyLogoAsMain"><a class="anchor" href="#ArgShowCustomCompanyLogoAsMain"></a>ShowCustomCompanyLogoAsMain</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When enabled, displays your organization's custom logo as the main logo.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSmartContentDisplayName"><a class="anchor" href="#ArgSmartContentDisplayName"></a>SmartContentDisplayName</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the name displayed for the portal's Smart Content portlet.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>Smart Content<br>
+<strong>Applies To: </strong>cm:IS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWarningMessagePath"><a class="anchor" href="#ArgWarningMessagePath"></a>WarningMessagePath</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the path to the file containting the message to be used as private warning</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="iMAS"><a class="anchor" href="#iMAS"></a>iMAS</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="IMASIntegration"><a class="anchor" href="#IMASIntegration"></a>IMASIntegration</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if iMAS integration should be active. Enabling this option deploys a new server listener and allows a new gadget to be configured.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="IMASAPIKey"><a class="anchor" href="#IMASAPIKey"></a>IMASAPIKey</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Key used to generate the API token for communication between the portal, client, and iMAS.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="IMASEndpoint"><a class="anchor" href="#IMASEndpoint"></a>IMASEndpoint</h3>
+<div class="listingblock">
+<div class="content">
+<pre>iMAS endpoint where sessions are created. This is also used to retrieve applications and destroy any created sessions.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="IMASSessionTimeout"><a class="anchor" href="#IMASSessionTimeout"></a>IMASSessionTimeout</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the iMAS session timeout in seconds.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Security"><a class="anchor" href="#Security"></a>Security</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgAllowSimultaneousLogins"><a class="anchor" href="#ArgAllowSimultaneousLogins"></a>AllowSimultaneousLogins</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if users are allowed to have simultaneous logins from different sessions.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEmailBasedLogin"><a class="anchor" href="#ArgEmailBasedLogin"></a>EmailBasedLogin</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The portal can verify users based on their email address or screen name. If this value is set to false (default value), the screen name is used for authentication.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgEnableUserManagement"><a class="anchor" href="#ArgEnableUserManagement"></a>EnableUserManagement</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Enables the User Management portlet on the Control Panel.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgInstanceSecurityAllUsers"><a class="anchor" href="#ArgInstanceSecurityAllUsers"></a>InstanceSecurityAllUsers</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Enables the visibility of the Instance Security Portlet to all users.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKeyStoreAlias"><a class="anchor" href="#ArgKeyStoreAlias"></a>KeyStoreAlias</h3>
+<div class="listingblock">
+<div class="content">
+<pre>All keystore entries are accessed via unique aliases and the KeyStoreAlias selects an entry from keystore to be used on the server. If more than one key is present in the kesytore it is strongly recommended that you configure a KeyStoreAlias, to ensure that the correct key is used.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>afserver<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKeyStorePath"><a class="anchor" href="#ArgKeyStorePath"></a>KeyStorePath</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the key store, which contains the required certificates used by the Portal's servers.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>config/keystore.ks<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKeyStorePwd"><a class="anchor" href="#ArgKeyStorePwd"></a>KeyStorePwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Password to access the key store contents.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>wds<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgKeyStoreType"><a class="anchor" href="#ArgKeyStoreType"></a>KeyStoreType</h3>
+<div class="listingblock">
+<div class="content">
+<pre>A keystore type defines the storage and data format of the keystore information, and the algorithms used to protect private keys in the keystore and the integrity of the keystore itself. Value can be one of the following: jceks, jks, or pkcs12.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>PKCS12<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgJWTSecretKeyAlias"><a class="anchor" href="#ArgJWTSecretKeyAlias"></a>JWTSecretKeyAlias</h3>
+<div class="listingblock">
+<div class="content">
+<pre>JWT Token Secret Key Alias on KeyStore.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="JWTSecretKeyPwd"><a class="anchor" href="#JWTSecretKeyPwd"></a>JWTSecretKeyPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>JWT Token Secret Key Password on KeyStore.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="JWTClaimUsername"><a class="anchor" href="#JWTClaimUsername"></a>JWTClaimUsername</h3>
+<div class="listingblock">
+<div class="content">
+<pre>JWT Token Claim with username.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>username<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="JWTDaysToExpire"><a class="anchor" href="#JWTDaysToExpire"></a>JWTDaysToExpire</h3>
+<div class="listingblock">
+<div class="content">
+<pre>JWT expires after the number of days defined.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>365<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="JWTDaysToExpireWarning"><a class="anchor" href="#JWTDaysToExpireWarning"></a>JWTDaysToExpireWarning</h3>
+<div class="listingblock">
+<div class="content">
+<pre>A warning is displayed on the log if the number of days defined or less until the JWT expires is missing.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>-1<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPortalRefererPolicy"><a class="anchor" href="#ArgPortalRefererPolicy"></a>PortalRefererPolicy</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Portal referer header value. Please consult the documentation for available <a href="https://www.w3.org/TR/referrer-policy/#referrer-policies">referrer policies</a>.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>strict-origin-when-cross-origin<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgReportPDFSigningKeyAlias"><a class="anchor" href="#ArgReportPDFSigningKeyAlias"></a>ReportPDFSigningKeyAlias</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Alias of the key used in the digital signature of PDF files generated by your system's Static Reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgReportPDFSigningKeyPwd"><a class="anchor" href="#ArgReportPDFSigningKeyPwd"></a>ReportPDFSigningKeyPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Password of the key used in the digital signature of PDF files generated by your system's Static Reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgReportPDFSigningTSAServerPwd"><a class="anchor" href="#ArgReportPDFSigningTSAServerPwd"></a>ReportPDFSigningTSAServerPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Password to connect to the TSA server used in the digital signature of PDF files generated by your system's Static Report.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgReportPDFSigningTSAServerURL"><a class="anchor" href="#ArgReportPDFSigningTSAServerURL"></a>ReportPDFSigningTSAServerURL</h3>
+<div class="listingblock">
+<div class="content">
+<pre>URL for the TSA server used in the digital signature of PDF files generated by your system's Static Reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgReportPDFSigningTSAServerUser"><a class="anchor" href="#ArgReportPDFSigningTSAServerUser"></a>ReportPDFSigningTSAServerUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Username to connect to the TSA server used in the digital signature of PDF files generated by your system's Static Reports.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPreventUserImportLDAP"><a class="anchor" href="#ArgPreventUserImportLDAP"></a>PreventUserImportLDAP</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Prevents Automatic User Import/Synchronization on LDAP Authentication.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgResetServerAdminPwd"><a class="anchor" href="#ArgResetServerAdminPwd"></a>ResetServerAdminPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Resets the adm password when executing the apply-instance-config command.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgResetServerInternalPwd"><a class="anchor" href="#ArgResetServerInternalPwd"></a>ResetServerInternalPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When set to true, forces the internal communication user's login settings to redefined, when upgrading from a previous version.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerUseSSL"><a class="anchor" href="#ArgServerUseSSL"></a>ServerUseSSL</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if the Portal server should use Secure Sockets Layer (SSL).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSslProtocol"><a class="anchor" href="#ArgSslProtocol"></a>SslProtocol</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Parameter indicating the protocol used for a specific SSL.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>TLSv1.2<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgTermsOfUseRequired"><a class="anchor" href="#ArgTermsOfUseRequired"></a>TermsOfUseRequired</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When enabled, requires all users to agree to the terms of use.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgTermsOfUseRequiredAlways"><a class="anchor" href="#ArgTermsOfUseRequiredAlways"></a>TermsOfUseRequiredAlways</h3>
+<div class="listingblock">
+<div class="content">
+<pre>When enabled, prompts users to agree with the terms of use for every login. This is only effective if the TermsOfUseRequired parameters if set to true.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgUsersInactivityPeriod"><a class="anchor" href="#ArgUsersInactivityPeriod"></a>UsersInactivityPeriod</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Max time since last log in before automatically locking a user.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>0<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWebServerUseH2andALPN"><a class="anchor" href="#ArgWebServerUseH2andALPN"></a>WebServerUseH2andALPN</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Activates support for HTTP/2. ALPN stands for "application-layer protocol negotiation" and is only applicable in tandem with transport layer security (e.g., SSL). When enabled, a compatible browser can upgrade the connections into HTTP/2 and take advantage of the performance features.
+
+**Requires JAVA &gt; u252 (it fails if lower) and requires SSL/TLS to be enabled**</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWebServerUseSSL"><a class="anchor" href="#ArgWebServerUseSSL"></a>WebServerUseSSL</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if the Portal server should use Secure Sockets Layer (SSL).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Server"><a class="anchor" href="#Server"></a>Server</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgAutomaticIdentifier"><a class="anchor" href="#ArgAutomaticIdentifier"></a>AutomaticIdentifier</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The path for the portal instance to deploy product artifacts, such as /instances/PRT_instance_directory. If left undefined, a manual step is required to deploy the web artifacts in the portal.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgCreateSystemPropertiesFromConfigFile"><a class="anchor" href="#ArgCreateSystemPropertiesFromConfigFile"></a>CreateSystemPropertiesFromConfigFile</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines if you'd like to create System Properties objects based on the configuration file parameter.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgExecuteOnExternalProcess"><a class="anchor" href="#ArgExecuteOnExternalProcess"></a>ExecuteOnExternalProcess</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Lets you enable the execution of shell scripts on an external process.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgExternalProcessServerPort"><a class="anchor" href="#ArgExternalProcessServerPort"></a>ExternalProcessServerPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the port for the standalone shell script executor service.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>-1<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgHsqlMode"><a class="anchor" href="#ArgHsqlMode"></a>HsqlMode</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Mode for the internal HSQL database. Acceptable values are: OFF, FILE, MEM for no DB, file based or in-memory DB, respectively.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>FILE<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgInternalServerCommunicationPwd"><a class="anchor" href="#ArgInternalServerCommunicationPwd"></a>InternalServerCommunicationPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Password for the internal communication user.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgInternalServerCommunicationUser"><a class="anchor" href="#ArgInternalServerCommunicationUser"></a>InternalServerCommunicationUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Designates a user for connecting between servers, such as Loading flows.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>internal<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgLoggerFormat"><a class="anchor" href="#ArgLoggerFormat"></a>LoggerFormat</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the format type of the messages on the log file.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>text<br>
+<strong>Applies To: </strong> cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgOnlineHelp"><a class="anchor" href="#ArgOnlineHelp"></a>OnlineHelp</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Deploys the Online Help's content and resources on your product. Changing this parameter's value after installation may produce unexpected behaviours.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>true<br>
+<strong>Applies To: </strong>fraud:FraudCenter, portal:Portal, rafm:RAFM</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPathToPortalInstance"><a class="anchor" href="#ArgPathToPortalInstance"></a>PathToPortalInstance</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The path for the portal instance to deploy product artifacts, such as /instances/PRT_instance_directory. If left undefined, a manual step is required to deploy the web artifacts in the portal.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgPerformServerRegistration"><a class="anchor" href="#ArgPerformServerRegistration"></a>PerformServerRegistration</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Enables registration in the portal, used when installing a satellite.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>false<br>
+<strong>Applies To: </strong>fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgSatellite"><a class="anchor" href="#ArgSatellite"></a>Satellite</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates if the instance to be installed is a satellite.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>BOOLEAN<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerAdminPwd"><a class="anchor" href="#ArgServerAdminPwd"></a>ServerAdminPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The admin user password.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerAdminUser"><a class="anchor" href="#ArgServerAdminUser"></a>ServerAdminUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>The admin's user name.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>adm<br>
+<strong>Applies To: </strong>cm:BS, cm:IS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerHost"><a class="anchor" href="#ArgServerHost"></a>ServerHost</h3>
+<div class="listingblock">
+<div class="content">
+<pre>RAID server name or IP address.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerInternalPwd"><a class="anchor" href="#ArgServerInternalPwd"></a>ServerInternalPwd</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Password for the internal communication user.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerInternalUser"><a class="anchor" href="#ArgServerInternalUser"></a>ServerInternalUser</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Internal communication user, for connecting between servers, for instance, to execute Loading flows.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>internal<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerMaxSessions"><a class="anchor" href="#ArgServerMaxSessions"></a>ServerMaxSessions</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Maximum number of sessions allowed in the RAID-RAFM server.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>300<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerMemoryOptions"><a class="anchor" href="#ArgServerMemoryOptions"></a>ServerMemoryOptions</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Initial and Maximum memory allocation for RAID server (Java process).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>-Xms128M -Xmx1024M -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:-DisableExplicitGC -XX:MaxPermSize=256m<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerPort"><a class="anchor" href="#ArgServerPort"></a>ServerPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Unique TCP/IP port for administration and client applications communication.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgServerSessionTimeout"><a class="anchor" href="#ArgServerSessionTimeout"></a>ServerSessionTimeout</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Time, in milliseconds, after which an idle session closes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>LONG<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>1800000<br>
+<strong>Applies To: </strong>fraud:FraudCenter, fraud:SatelliteServer, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWebCompressableMimeTypes"><a class="anchor" href="#ArgWebCompressableMimeTypes"></a>WebCompressableMimeTypes</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Indicates which mime types should be compressed.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,image/gif,image/png,image/jpg,image/jpeg,application/json,application/x-font-woff<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="UVE"><a class="anchor" href="#UVE"></a>UVE</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgUVEKeyRecordThreshold"><a class="anchor" href="#ArgUVEKeyRecordThreshold"></a>UVEKeyRecordThreshold</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the maximum number of records that a single view can retrieve with the same key.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>1000<br>
+<strong>Applies To: </strong>rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="WebServer"><a class="anchor" href="#WebServer"></a>Web Server</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ArgWebServerHost"><a class="anchor" href="#ArgWebServerHost"></a>WebServerHost</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tomcat web server hostname or IP address. This address must be accessible and known, DNS-wise, by all machines that use the web client application.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>STRING<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong><br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWebServerPort"><a class="anchor" href="#ArgWebServerPort"></a>WebServerPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Tomcat web server port.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Mandatory<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, fraud:FraudCenter, fraud:SatelliteServer, portal:Portal, rafm:RAFM, raid:RAS</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWebServerShutdownPort"><a class="anchor" href="#ArgWebServerShutdownPort"></a>WebServerShutdownPort</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Portal TCP port to be used. This is the internal Tomcat shutdown port.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>8005<br>
+<strong>Applies To: </strong>portal:Portal</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ArgWebSessionTimeout"><a class="anchor" href="#ArgWebSessionTimeout"></a>WebSessionTimeout</h3>
+<div class="listingblock">
+<div class="content">
+<pre>Defines the web session timeout in minutes.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Data Type: </strong>INTEGER<br>
+<strong>Use: </strong>Optional<br>
+<strong>Default Value: </strong>30<br>
+<strong>Applies To: </strong>cm:BS, cm:BS-Satellite, cm:IS, cm:PS, portal:Portal</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

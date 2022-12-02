@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portal Patch process :: Antora-Portal</title>
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="..">Antora-Portal</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-portal" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="install.html">Antora-Portal</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: install.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: argeuments.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: patch.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade_from_0.1.X.adoc[]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">xref: upgrade.adoc[]</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora-Portal</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="install.html">Antora-Portal</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="install.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="install.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="install.html">Antora-Portal</a></li>
+    <li><a href="patch.html">Portal Patch process</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/gargvishu2000/antora-portal/edit/main/docs/modules/ROOT/pages/patch.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Portal Patch process</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_naming_conventions">1.1. Naming Conventions</a></li>
+</ul>
+</li>
+<li><a href="#_types_of_patches">2. Types of Patches</a>
+<ul class="sectlevel2">
+<li><a href="#_patches_applied_with_helm_upgrade_only">2.1. Patches applied with helm upgrade only</a></li>
+<li><a href="#_patches_that_require_launching_a_job">2.2. Patches that require launching a job</a></li>
+</ul>
+</li>
+<li><a href="#_applying_patches">3. Applying patches</a>
+<ul class="sectlevel2">
+<li><a href="#_applying_patch_to_aip_image">3.1. Applying patch to AIP Image</a></li>
+<li><a href="#_applying_filesystem_patches">3.2. Applying Filesystem patches</a></li>
+<li><a href="#_applying_cumulative_patches">3.3. Applying cumulative patches</a></li>
+<li><a href="#_applying_spo_database_and_javascript_patches">3.4. Applying SPO, Database and JavaScript patches</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document details all portal patch processes.</p>
+</div>
+<div class="sect2">
+<h3 id="_naming_conventions"><a class="anchor" href="#_naming_conventions"></a>1.1. Naming Conventions</h3>
+<div class="paragraph">
+<p>In this document the following naming conventions will be established.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variable</th>
+<th class="tableblock halign-left valign-top">Meaning/mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${YOUR_NAMESPACE}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The kubernetes namespace where to deploy all the elements of the installation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_CHART_VERSION}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The chart version to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_IMAGE_REG}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new image registry to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_IMAGE_REPO}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new image repository to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${UPGRADE_IMAGE_TAG}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The new image tag to be used when upgrading the deployment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${LIST_OF PATCHES}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directory containing a list of patches to be applied.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_types_of_patches"><a class="anchor" href="#_types_of_patches"></a>2. Types of Patches</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The patch process can be <strong>divided</strong> into <strong>two</strong> different pipelines:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Patches applied with helm upgrade:</strong> you only need to execute <code>helm upgrade</code> command.</p>
+</li>
+<li>
+<p><strong>Patches that require launching a job</strong>: requires a storage patch location, under the deployment directory, and that can be set using the <code>deployment.patch-path</code> option.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Next you can consult a list with the different patch scenarios and which category they belong to.</p>
+</div>
+<div class="sect2">
+<h3 id="_patches_applied_with_helm_upgrade_only"><a class="anchor" href="#_patches_applied_with_helm_upgrade_only"></a>2.1. Patches applied with helm upgrade only</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Patches to AIP Image:</strong> when there are structural changes to the portal image.</p>
+</li>
+<li>
+<p><strong>Filesystem patches:</strong> to apply filesystem patches on pod startup.</p>
+</li>
+<li>
+<p><strong>Cumulative patches:</strong> cumulative patches with no database changes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patches_that_require_launching_a_job"><a class="anchor" href="#_patches_that_require_launching_a_job"></a>2.2. Patches that require launching a job</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Database patches</strong></p>
+</li>
+<li>
+<p><strong>SPO patches</strong></p>
+</li>
+<li>
+<p><strong>JavaScript patches</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applying_patches"><a class="anchor" href="#_applying_patches"></a>3. Applying patches</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next steps will use <a href="install.html#_install_portal_eg" class="xref page">this</a> as base for the different patch scenarios.</p>
+</div>
+<div class="sect2">
+<h3 id="_applying_patch_to_aip_image"><a class="anchor" href="#_applying_patch_to_aip_image"></a>3.1. Applying patch to AIP Image</h3>
+<div class="paragraph">
+<p>When there are <strong>structural changes</strong> to the portal image you can apply a patch by upgrading the release itself, running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm upgrade portal \
+  --set deployment.upgrade-path=upgrade \
+  --set image.registry=${UPGRADE_IMAGE_REG} \
+  --set image.repository=${UPGRADE_IMAGE_REPO} \
+  --set image.tag=${UPGRADE_IMAGE_TAG} \
+  --timeout 30m \
+  &lt;PATH_TO_BUNDLE&gt;/charts/ \
+  --version "${UPGRADE_CHART_VERSION}"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_applying_filesystem_patches"><a class="anchor" href="#_applying_filesystem_patches"></a>3.2. Applying Filesystem patches</h3>
+<div class="paragraph">
+<p>Filesystem patches run on pod startup.</p>
+</div>
+<div class="paragraph">
+<p>To get started, place all patches under <code>patches</code> of your deployment <code>startup</code> directory. Then restart your deployment by executing the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl scale deployment portal --replicas=0 &amp;&amp; \
+kubectl scale deployment portal --replicas=1</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_applying_cumulative_patches"><a class="anchor" href="#_applying_cumulative_patches"></a>3.3. Applying cumulative patches</h3>
+<div class="paragraph">
+<p>Cumulative patches - with <strong>no database changes</strong> - are applied the same way as patching the AIP image, meaning a <code>helm upgrade</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm upgrade portal \
+  --set deployment.upgrade-path=upgrade \
+  --set image.registry=${UPGRADE_IMAGE_REG} \
+  --set image.repository=${UPGRADE_IMAGE_REPO} \
+  --set image.tag=${UPGRADE_IMAGE_TAG} \
+  --timeout 30m \
+  &lt;PATH_TO_BUNDLE&gt;/charts/ \
+  --version "${UPGRADE_CHART_VERSION}"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_applying_spo_database_and_javascript_patches"><a class="anchor" href="#_applying_spo_database_and_javascript_patches"></a>3.4. Applying SPO, Database and JavaScript patches</h3>
+<div class="paragraph">
+<p>SPO, Database and JavaScript patches, all require a job to perform the patch process.</p>
+</div>
+<div class="sect3">
+<h4 id="_upload_the_process"><a class="anchor" href="#_upload_the_process"></a>3.4.1. Upload the process</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_upload_patches"><a class="anchor" href="#_upload_patches"></a>3.4.2. Upload patches</h4>
+<div class="paragraph">
+<p>All patches should be placed under <code>patches</code> of your deployment <code>patch</code> directory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">aws s3 cp ${LIST_OF PATCHES}/ s3://mybucket/example/portal/patch/patches/</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_apply_the_patches"><a class="anchor" href="#_apply_the_patches"></a>3.4.3. Apply the patches</h4>
+<div class="paragraph">
+<p>Launch the <strong>patch process</strong>, running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">helm upgrade portal \
+  --set deployment.patch-path=patch \
+  --set image.registry=${UPGRADE_IMAGE_REG} \
+  --set image.repository=${UPGRADE_IMAGE_REPO} \
+  --set image.tag=${UPGRADE_IMAGE_TAG} \
+  --timeout 30m \
+  &lt;PATH_TO_BUNDLE&gt;/charts/ \
+  --version "${UPGRADE_CHART_VERSION}"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_restart_deployment"><a class="anchor" href="#_restart_deployment"></a>3.4.4. Restart deployment</h4>
+<div class="paragraph">
+<p>Then restart your deployment, to get the new configurations and receive new WAR files, by executing the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">kubectl scale deployment portal --replicas=0 &amp;&amp; \
+kubectl scale deployment portal --replicas=1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
