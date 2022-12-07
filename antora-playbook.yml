@@ -8,9 +8,11 @@ content:
      start_path: docs
 ui:
   bundle:
-    url:  /mnt/c/Users/Subham.garg/Desktop/antora-ui-default/build/ui-bundle.zip
+    url:  /mnt/c/Users/Subham.garg/Documents/antora-working-ui/antora-ui-default/build/ui-bundle.zip
     snapshot: true
 antora:
   extensions:
-  - '@antora/lunr-extension'
+  - require: '@antora/lunr-extension'
+    snippet_length: 250
+
 
