@@ -1,4 +1,4 @@
-* xref:install.adoc[Install]
+* xref:index.adoc[Install]
 * xref:arguments.adoc[Arguments]
 * xref:patch.adoc[Patch]
 * xref:upgrade_from_0.1.X.adoc[Upgrade from 0.1.X]
