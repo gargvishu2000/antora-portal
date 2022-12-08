@@ -1,5 +1,5 @@
 name: antora-portal
 title: Antora-Portal
-version: ~
+version: '1.0'
 nav:
 - modules/ROOT/nav.adoc
