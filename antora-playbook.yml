@@ -8,7 +8,7 @@ content:
      start_path: docs
 ui:
   bundle:
-    url:  /mnt/C:/Users/Subham.garg/Documents/antora-working-ui/antora-ui-default/build/ui-bundle.zip
+    url:  url: ./antora-ui-default/build/ui-bundle.zip
     snapshot: true
 antora:
   extensions:
